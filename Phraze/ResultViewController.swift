@@ -18,6 +18,8 @@ class ResultViewController: UIViewController,UITableViewDelegate,UITableViewData
     @IBOutlet weak var resultTV: UITableView!
     var Image = UIImage()
     
+    var caption = ["Dog":"Noun","Drinking":"Verb","Water":"Noun"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         display.clipsToBounds = true
@@ -32,12 +34,12 @@ class ResultViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return caption.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ResultTableViewCell
-        
+        cell.setData(forWord: Array(caption.keys)[indexPath.row] , ofType: Array(caption.values)[indexPath.row])
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

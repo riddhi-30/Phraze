@@ -30,6 +30,8 @@ class ResultViewController: UIViewController,UITableViewDelegate,UITableViewData
         resultTV.dataSource = self
         
         pickedImage.image = Image
+        pickedImage.clipsToBounds = true
+        pickedImage.layer.cornerRadius = 50
 
     }
     
@@ -44,6 +46,13 @@ class ResultViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 63
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let word = Array(caption.keys)[indexPath.row]
+        if UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: word) {
+            let ref: UIReferenceLibraryViewController = UIReferenceLibraryViewController(term: word)
+            self.present(ref, animated: true, completion: nil)
+        }
     }
     
     @IBAction func back(_ sender: Any) {

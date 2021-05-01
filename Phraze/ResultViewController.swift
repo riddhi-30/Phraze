@@ -10,23 +10,25 @@ import UIKit
 class ResultViewController: UIViewController {
 
     @IBOutlet weak var display: UIView!
+    @IBOutlet weak var pickedImage: UIImageView!
+    @IBOutlet weak var againButton: UIButton!
+    
+    var Image = UIImage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        display.layer.cornerRadius = 35
         display.clipsToBounds = true
+        againButton.clipsToBounds = true
+        display.layer.cornerRadius = 35
+        againButton.layer.cornerRadius = 12.89
+        
+        pickedImage.image = Image
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func back(_ sender: Any) {
+        self.navigationController?.popToViewController((self.navigationController?.viewControllers.first(where: {$0 is WelcomeViewController}))!, animated: true)
     }
-    */
-
+    
+    
 }

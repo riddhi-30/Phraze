@@ -7,12 +7,23 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
-
-
+class WelcomeViewController: UIViewController, ImagePickerDelegate {
+    
     @IBOutlet weak var bg: UIView!
     @IBOutlet weak var takePic: UIButton!
     @IBOutlet weak var uploadPic: UIButton!
+    
+    
+    var imagePicker: ImagePicker!
+    
+    var pickedImage = UIImage(){
+        didSet{
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1){
+                self.performSegue(withIdentifier: "results", sender: self)
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let imageName = "X - 4"
@@ -32,17 +43,37 @@ class WelcomeViewController: UIViewController {
         uploadPic.layer.borderWidth = 2
         uploadPic.layer.borderColor = UIColor(red: 0.372, green: 0.181, blue: 0.917, alpha: 1).cgColor
         
-
+        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
         // Do any additional setup after loading the view.
     }
     
     @IBAction func takePicture(_ sender: Any) {
+        let sender = sender as! UIButton
+        self.imagePicker.present(from: sender, for: .camera)
     }
     
     @IBAction func uplaod(_ sender: Any) {
-        
-            }
+        let sender = sender as! UIButton
+        self.imagePicker.present(from: sender, for: .photoLibrary)
     }
+    
+    func didSelect(image: UIImage?) {
+        if let image = image{
+            let imgV = UIImageView()
+            imgV.image = image
+            self.pickedImage = imgV.image!
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "results"{
+            let vc = segue.destination as! ResultViewController
+            vc.Image = pickedImage
+        }
+    }
+
+    
+}
     /*
     // MARK: - Navigation
 

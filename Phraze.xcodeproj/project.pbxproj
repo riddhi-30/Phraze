@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AFDC30D5263D246200841783 /* NewImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDC30D4263D246200841783 /* NewImagePicker.swift */; };
 		FD6D7CEF263C8B6000D52B7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6D7CEE263C8B6000D52B7B /* AppDelegate.swift */; };
 		FD6D7CF1263C8B6000D52B7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6D7CF0263C8B6000D52B7B /* SceneDelegate.swift */; };
 		FD6D7CF3263C8B6000D52B7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6D7CF2263C8B6000D52B7B /* ViewController.swift */; };
@@ -38,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AFDC30D4263D246200841783 /* NewImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewImagePicker.swift; sourceTree = "<group>"; };
+		AFDC30D9263D2B3100841783 /* CircularStd-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Book.ttf"; sourceTree = "<group>"; };
+		AFDC30DA263D2B3100841783 /* CircularStd-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Bold.ttf"; sourceTree = "<group>"; };
+		AFDC30DB263D2B3100841783 /* CircularStd-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Medium.ttf"; sourceTree = "<group>"; };
+		AFDC30DC263D2B3100841783 /* CircularStd-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Black.ttf"; sourceTree = "<group>"; };
 		FD6D7CEB263C8B6000D52B7B /* Phraze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phraze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6D7CEE263C8B6000D52B7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD6D7CF0263C8B6000D52B7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +88,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AFDC30DD263D2B3D00841783 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AFDC30DC263D2B3100841783 /* CircularStd-Black.ttf */,
+				AFDC30DA263D2B3100841783 /* CircularStd-Bold.ttf */,
+				AFDC30D9263D2B3100841783 /* CircularStd-Book.ttf */,
+				AFDC30DB263D2B3100841783 /* CircularStd-Medium.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		FD6D7CE2263C8B6000D52B7B = {
 			isa = PBXGroup;
 			children = (
@@ -111,10 +128,12 @@
 				FD6D7CF4263C8B6000D52B7B /* Main.storyboard */,
 				FD6D7D53263C9A4700D52B7B /* ResultViewController.swift */,
 				FD6D7D4E263C967B00D52B7B /* ImagePicker.swift */,
+				AFDC30D4263D246200841783 /* NewImagePicker.swift */,
 				FD6D7D21263C906200D52B7B /* WelcomeViewController.swift */,
 				FD6D7CF7263C8B6200D52B7B /* Assets.xcassets */,
 				FD6D7CF9263C8B6200D52B7B /* LaunchScreen.storyboard */,
 				FD6D7CFC263C8B6200D52B7B /* Info.plist */,
+				AFDC30DD263D2B3D00841783 /* Fonts */,
 			);
 			path = Phraze;
 			sourceTree = "<group>";
@@ -272,6 +291,7 @@
 				FD6D7D4F263C967B00D52B7B /* ImagePicker.swift in Sources */,
 				FD6D7CEF263C8B6000D52B7B /* AppDelegate.swift in Sources */,
 				FD6D7CF1263C8B6000D52B7B /* SceneDelegate.swift in Sources */,
+				AFDC30D5263D246200841783 /* NewImagePicker.swift in Sources */,
 				FD6D7D54263C9A4700D52B7B /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,13 +469,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 526BVV54R4;
+				DEVELOPMENT_TEAM = 5966D3T864;
 				INFOPLIST_FILE = Phraze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lkc.Phraze;
+				PRODUCT_BUNDLE_IDENTIFIER = fakeyudi.Phraze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -468,13 +488,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 526BVV54R4;
+				DEVELOPMENT_TEAM = 5966D3T864;
 				INFOPLIST_FILE = Phraze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lkc.Phraze;
+				PRODUCT_BUNDLE_IDENTIFIER = fakeyudi.Phraze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

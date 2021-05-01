@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ResultViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     
 
+    @IBOutlet weak var captionGenearted: UILabel!
     @IBOutlet weak var display: UIView!
     @IBOutlet weak var pickedImage: UIImageView!
     @IBOutlet weak var againButton: UIButton!
@@ -59,5 +61,14 @@ class ResultViewController: UIViewController,UITableViewDelegate,UITableViewData
         self.navigationController?.popToViewController((self.navigationController?.viewControllers.first(where: {$0 is WelcomeViewController}))!, animated: true)
     }
     
+    @IBAction func speech(_ sender: Any) {
+        var speechSynthesizer = AVSpeechSynthesizer()
+        var speechUtterance: AVSpeechUtterance = AVSpeechUtterance(string: captionGenearted.text!)
+                speechUtterance.rate = AVSpeechUtteranceMaximumSpeechRate / 2.0
+                speechUtterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                speechSynthesizer.speak(speechUtterance)
+
+    }
+   
     
 }

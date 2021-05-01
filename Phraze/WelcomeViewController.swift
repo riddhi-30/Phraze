@@ -12,6 +12,7 @@ class WelcomeViewController: UIViewController, ImagePickerDelegate {
     @IBOutlet weak var bg: UIView!
     @IBOutlet weak var takePic: UIButton!
     @IBOutlet weak var uploadPic: UIButton!
+    @IBOutlet weak var heading: UILabel!
     
     
     var imagePicker: ImagePicker!
@@ -33,7 +34,6 @@ class WelcomeViewController: UIViewController, ImagePickerDelegate {
         imageView.contentMode = .scaleAspectFill
         view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
-        
         bg.layer.cornerRadius = 35
         bg.clipsToBounds = true
         uploadPic.layer.cornerRadius = 12.89

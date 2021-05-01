@@ -50,13 +50,13 @@
 </string>
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="16" name="CircularStd-Medium"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="Scan your surroundings and let PHRAZE let you know what it is.">
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="16" name="CircularStd-Medium"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="2" paragraphSpacingBefore="2" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -93,6 +93,7 @@
                     </view>
                     <connections>
                         <outlet property="getSTart" destination="PHb-HE-SNS" id="X9s-5A-yM8"/>
+                        <outlet property="heading" destination="ZrG-IU-p7z" id="fF7-fN-RT9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -125,7 +126,7 @@
                                             <fragment content="Phraze works by taking an image and then gives you a caption describing the same">
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="13" name="CircularStd-Book"/>
+                                                    <font key="NSFont" metaFont="system"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="2" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -197,6 +198,7 @@
                     <navigationItem key="navigationItem" id="pTq-e8-k3D"/>
                     <connections>
                         <outlet property="bg" destination="ghk-R4-5rK" id="v2K-eB-9gv"/>
+                        <outlet property="heading" destination="am4-eS-Siz" id="Ddk-Jp-IHm"/>
                         <outlet property="takePic" destination="YEO-Tp-kvJ" id="opD-Cg-YaN"/>
                         <outlet property="uploadPic" destination="wpf-OZ-tTB" id="rBQ-Zn-9L9"/>
                         <segue destination="hZh-eY-EPq" kind="show" identifier="results" id="4Lo-Sy-QRA"/>
@@ -263,6 +265,63 @@
                                             <action selector="back:" destination="hZh-eY-EPq" eventType="touchUpInside" id="bp2-iT-3c1"/>
                                         </connections>
                                     </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gEk-6v-Uhb">
+                                        <rect key="frame" x="24" y="128" width="327" height="202"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="94" id="3H8-Tf-Ca9" customClass="ResultTableViewCell" customModule="Phraze" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="327" height="94"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3H8-Tf-Ca9" id="56p-8W-i0y">
+                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="94"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M2T-QJ-2Lb">
+                                                            <rect key="frame" x="0.0" y="4" width="327" height="53"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFw-bZ-Wgk">
+                                                                    <rect key="frame" x="13" y="18" width="36" height="17"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IbG-rV-Aee">
+                                                                    <rect key="frame" x="238" y="14" width="75" height="24"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1z-yZ-Gbj">
+                                                                            <rect key="frame" x="19" y="4" width="36" height="17"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" red="0.29019607843137252" green="0.78823529411764703" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </view>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.1176470588" green="0.1450980392" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </view>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="greenBg" destination="IbG-rV-Aee" id="wtn-ay-nuf"/>
+                                                    <outlet property="main" destination="M2T-QJ-2Lb" id="YBw-bF-F2T"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word Breakdown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiR-lQ-7Jg">
+                                        <rect key="frame" x="24" y="111" width="100" height="9"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.058823529409999999" green="0.074509803920000006" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
@@ -296,11 +355,12 @@
                         <outlet property="againButton" destination="wt7-Lx-20j" id="fhl-fZ-89B"/>
                         <outlet property="display" destination="Tku-0m-fTs" id="eR1-kp-y2z"/>
                         <outlet property="pickedImage" destination="69B-Hn-MLB" id="6uZ-su-PpZ"/>
+                        <outlet property="resultTV" destination="gEk-6v-Uhb" id="SYG-af-EiM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1L-ct-Pw0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3269" y="80"/>
+            <point key="canvasLocation" x="3267.6923076923076" y="79.620853080568722"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="00B-mk-CEm">

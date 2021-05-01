@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var heading: UILabel!
     @IBOutlet weak var getSTart: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()

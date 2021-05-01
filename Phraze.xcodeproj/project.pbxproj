@@ -19,6 +19,7 @@
 		FD6D7D22263C906200D52B7B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6D7D21263C906200D52B7B /* WelcomeViewController.swift */; };
 		FD6D7D4F263C967B00D52B7B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6D7D4E263C967B00D52B7B /* ImagePicker.swift */; };
 		FD6D7D54263C9A4700D52B7B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6D7D53263C9A4700D52B7B /* ResultViewController.swift */; };
+		FD769F3C263D6FB800CE9622 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD769F3B263D6FB800CE9622 /* ResultTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		FD6D7D21263C906200D52B7B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		FD6D7D4E263C967B00D52B7B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		FD6D7D53263C9A4700D52B7B /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		FD769F3B263D6FB800CE9622 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				FD6D7CF0263C8B6000D52B7B /* SceneDelegate.swift */,
 				FD6D7CF2263C8B6000D52B7B /* ViewController.swift */,
 				FD6D7CF4263C8B6000D52B7B /* Main.storyboard */,
+				FD769F3B263D6FB800CE9622 /* ResultTableViewCell.swift */,
 				FD6D7D53263C9A4700D52B7B /* ResultViewController.swift */,
 				FD6D7D4E263C967B00D52B7B /* ImagePicker.swift */,
 				AFDC30D4263D246200841783 /* NewImagePicker.swift */,
@@ -292,6 +295,7 @@
 				FD6D7CEF263C8B6000D52B7B /* AppDelegate.swift in Sources */,
 				FD6D7CF1263C8B6000D52B7B /* SceneDelegate.swift in Sources */,
 				AFDC30D5263D246200841783 /* NewImagePicker.swift in Sources */,
+				FD769F3C263D6FB800CE9622 /* ResultTableViewCell.swift in Sources */,
 				FD6D7D54263C9A4700D52B7B /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

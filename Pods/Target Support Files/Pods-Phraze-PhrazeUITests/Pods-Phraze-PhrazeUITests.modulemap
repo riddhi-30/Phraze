@@ -1,0 +1,6 @@
+framework module Pods_Phraze_PhrazeUITests {
+  umbrella header "Pods-Phraze-PhrazeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

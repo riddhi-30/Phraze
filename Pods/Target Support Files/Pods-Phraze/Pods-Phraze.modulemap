@@ -1,0 +1,6 @@
+framework module Pods_Phraze {
+  umbrella header "Pods-Phraze-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -10,6 +10,10 @@ import MaterialComponents.MaterialTextControls_OutlinedTextAreas
 import MaterialComponents.MaterialTextControls_OutlinedTextFields
 
 class LoginViewController: UIViewController {
+    
+    
+    @IBOutlet weak var loginBtn: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +31,7 @@ class LoginViewController: UIViewController {
         textField.placeholder = "example@xyz.com"
         textField.sizeToFit()
         view.addSubview(textField)
+        textField.layer.cornerRadius = 10
         
         let estimatedFramee = CGRect(x: 21, y: 358, width: 333, height: 55)
         let passtextField = MDCOutlinedTextField(frame: estimatedFramee)
@@ -34,10 +39,31 @@ class LoginViewController: UIViewController {
         passtextField.placeholder = "Must contain 8 characters"
         passtextField.sizeToFit()
         view.addSubview(passtextField)
+        passtextField.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
+        
+        loginBtn.clipsToBounds = true
+        loginBtn.layer.cornerRadius = 13
+        
+        hideKeyboardWhenTappedAround()
     }
     
-
+    func hideKeyboardWhenTappedAround(){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
+    
+    
+    @IBAction func loginBtn(_ sender: Any) {
+        self.performSegue(withIdentifier: "home", sender: self)
+    }
+    
+    @IBAction func signUp(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 

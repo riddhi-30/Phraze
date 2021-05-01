@@ -10,6 +10,9 @@ import MaterialComponents.MaterialTextControls_OutlinedTextAreas
 import MaterialComponents.MaterialTextControls_OutlinedTextFields
 
 class SignUpViewController: UIViewController {
+    
+    @IBOutlet weak var loginBtn: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +30,7 @@ class SignUpViewController: UIViewController {
         nametextField.placeholder = "John George"
         nametextField.sizeToFit()
         view.addSubview(nametextField)
+        nametextField.layer.cornerRadius = 10
         
         let estimatedFrame = CGRect(x: 21, y: 358, width: 333, height: 55)
         let textField = MDCOutlinedTextField(frame: estimatedFrame)
@@ -34,6 +38,7 @@ class SignUpViewController: UIViewController {
         textField.placeholder = "example@xyz.com"
         textField.sizeToFit()
         view.addSubview(textField)
+        textField.layer.cornerRadius = 10
         
         let estimatedFramee = CGRect(x: 21, y: 438, width: 333, height: 55)
         let passtextField = MDCOutlinedTextField(frame: estimatedFramee)
@@ -41,11 +46,29 @@ class SignUpViewController: UIViewController {
         passtextField.placeholder = "Must contain 8 characters"
         passtextField.sizeToFit()
         view.addSubview(passtextField)
-
+        passtextField.layer.cornerRadius = 10
+        
+        loginBtn.clipsToBounds = true
+        loginBtn.layer.cornerRadius = 13
         // Do any additional setup after loading the view.
     }
     
-
+    func hideKeyboardWhenTappedAround(){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
+    
+    
+    @IBAction func signup(_ sender: Any) {
+        self.performSegue(withIdentifier: "home", sender: self)
+    }
+    
+    @IBAction func loginShow(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 

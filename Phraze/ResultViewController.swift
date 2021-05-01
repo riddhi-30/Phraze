@@ -58,7 +58,7 @@ class ResultViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     @IBAction func back(_ sender: Any) {
-        self.navigationController?.popToViewController((self.navigationController?.viewControllers.first(where: {$0 is WelcomeViewController}))!, animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func speech(_ sender: Any) {
